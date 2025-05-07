@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRB | Três letras, Duas Cores, Uma Paixão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="CRB_logo.svg.png" type="image/x-icon">
+</head>
+<body>
+    <img id="crb" src="CRB_logo.svg.png" alt="">
+    <div class="container">
+        <form id="formulario" action="formulario">
+            <h1>Meu Regatas</h1>
+            <div class="input">
+            <label for="username">Usuário: </label>
+            <input type="text" id="username" name="username" id="username">
+            <p id="errorUser"></p>    
+        </div>
+        <div class="input senha">
+            <label for="password">Senha: </label>
+            <input type="password" id="password" name="password">
+            <p id="errorSenha"></p>
+        </div>
+        <button type="submit" id="botao">Entrar</button>
+        <p id="errorMessage" class="error-message"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
