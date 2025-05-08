@@ -7,8 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-
-body{
+body {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -16,43 +15,43 @@ body{
     justify-content: center;
     background-image: url('mine.jpg');
     background-size: cover;
-    background-color: rgba(154, 145, 145, 0.5);
+    background-color: rgba(226, 10, 10, 0.5);
     flex-direction: column;
     gap: 20px;
 }
 
-
-.container{
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50vh;
-    width: 25vw;
-     background-color: #ffe5e5;
+    width: 90%; /* Ajustado para ser responsivo */
+    max-width: 400px; /* Limita o tamanho máximo */
+    background-color: #ffe5e5;
     flex-direction: column;
     border-radius: 20px;
     position: relative;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px; /* Adicionado padding para espaçamento */
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Garante que o formulário use a largura total da container */
 }
 
 .input input {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+    width: 100%; /* Responsivo */
     padding: 10px;
     margin-top: 5px;
     border: 2px solid #ccc;
     border-radius: 8px;
     transition: border-color 0.3s, box-shadow 0.3s;
     font-size: 16px;
+    max-width: 300px; /* Tamanho máximo do campo */
 }
-
 
 .input input:focus {
     border-color: #e60000; 
@@ -60,14 +59,15 @@ form {
     outline: none;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-bottom: 40px;
     color: #800f0f;
 }
 
 #botao {
-    width: 200px;
+    width: 100%;
+    max-width: 200px; /* Limita a largura do botão */
     height: 45px;
     margin-top: 30px;
     border: none;
@@ -87,8 +87,9 @@ h1{
     transform: scale(1.03);
 }
 
-#logout{
-    width: 225px;
+#logout {
+    width: 100%;
+    max-width: 225px;
     height: 40px;
     margin-top: 30px;
     border-radius: 10px;
@@ -98,19 +99,68 @@ h1{
     color: white;
 }
 
-#crb{
+#crb {
     height: 150px;
     margin-left: 15px;
 }
 
-#dash{
+#dash {
     color: rgb(31, 99, 25);
 }
 
-.senha{
+.senha {
     margin-top: 10px;
 }
 
-#botao:disabled{
+#botao:disabled {
     background-color: #ccc;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajusta para 90% da largura */
+        max-width: 350px; /* Limita a largura máxima */
+        height: auto; /* Permite altura automática */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .input input {
+        width: 100%;
+    }
+
+    #botao {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #logout {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Adiciona padding para não ficar muito colado nas bordas */
+    }
+
+    .container {
+        width: 90%; /* Mais adaptável para dispositivos menores */
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .input input {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    #botao {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+    }
 }
